@@ -28,6 +28,9 @@ $(call inherit-product, vendor/samsung/a73xq/a73xq-vendor.mk)
 PRODUCT_PACKAGES += \
     init.a73xq.rc
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/etc/persistentLogging.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/persistentLogging.rc
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
