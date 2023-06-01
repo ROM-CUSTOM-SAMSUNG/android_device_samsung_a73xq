@@ -16,7 +16,9 @@
 
 DEVICE_PATH := device/samsung/a73xq
 
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay \
+    $(DEVICE_PATH)/overlay-aosp
 
 # call the common setup
 $(call inherit-product, device/samsung/sm7325-common/common.mk)
